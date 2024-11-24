@@ -65,6 +65,8 @@ def main():
 
     with console.status("[bold green]Downloading mods...[/bold green]", spinner="dots"):
         for mod in mod_list:
+            if mod.selectedMod == 0:
+                continue
             mod.downloadMod()
 
     console.clear()
